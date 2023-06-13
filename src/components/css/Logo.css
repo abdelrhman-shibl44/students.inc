@@ -1,0 +1,36 @@
+/* logo style  */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.logo-title .inc {
+  margin: 0 0.4rem 0 0.5rem;
+  font-weight: 200;
+}
+
+.logo-image {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-title-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Add additional styles as needed */
+/* logo responsive  */
+
+@media(max-width:767px) {
+  .logo-title {
+    font-size: 1rem;
+  }
+}
