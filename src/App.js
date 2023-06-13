@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import NavigationBar from './components/NavigationBar';
-import Header from './components/Header';
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Assessment from './components/Assessment';
@@ -10,6 +9,7 @@ import NotFound from './components/NotFound';
 function App() {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
+  // fetch users data
   useEffect(() => {
     const fetchUserData = async () => {
       try {

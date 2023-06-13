@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Big Five Personality Assessment Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web application built using React.js that allows users to take the Big Five Personality Assessment. It includes key features such as a navigation bar, fetching user data from an API, and routing using React Router.
 
-## Available Scripts
+## Instructions
 
-In the project directory, you can run:
+To run the application locally, follow these steps:
 
-### `npm start`
+1. Clone the repository: `git clone <repository-url>`
+2. Navigate to the project directory: `cd big-five-personality-assessment`
+3. Install the dependencies: `npm install`
+4. Start the development server: `npm start`
+5. Open the application in your browser at `http://localhost:3000`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run the tests, use the following command:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Design Choices
 
-### `npm test`
+1. **React.js**: I chose React.js as the framework for this project due to its component-based architecture, reusability, and ease of state management.
+2. **React Router**: I used React Router to handle routing and navigation within the application, enabling multiple pages and a better user experience.
+3. **API Integration**: I utilized the `fetch` API to retrieve user data from a remote server and display it in the navigation bar. Error handling was implemented to provide a suitable fallback UI in case of API failures.
+4. **Responsive Design**: The application is designed to be responsive and render properly on different devices and window sizes. I utilized CSS media queries and responsive design techniques to achieve this.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Challenges and Solutions
 
-### `npm run build`
+During the development process, I encountered a few challenges and overcame them:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **API Error Handling**: Implementing error handling for API calls was a challenge. To handle potential errors, I utilized try-catch blocks and conditional rendering to display appropriate error messages to the user when fetching user data failed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Managing Dynamic State with useState and useEffect
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In scenarios where dynamic state management is required on a page, we can use the `useState` and `useEffect` hooks provided by React.
 
-### `npm run eject`
+- `useState`: The `useState` hook allows us to declare and manage state variables in functional components. We can define an initial state value and a function to update the state. For example, we can use `useState` to manage the open and close state of a modal window.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `useEffect`: The `useEffect` hook is used to perform side effects in functional components. It accepts a callback function that runs after every render. We can use `useEffect` to handle tasks such as fetching data from an API, subscribing to events, or performing cleanup operations. For example, we can use `useEffect` to fetch user data from an API when the component mounts.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In the context of this project, we used the `useState` hook to manage the user data fetched from the API. The initial state was set to `null`, and the `setUser` function was used to update the state with the retrieved data. The `useEffect` hook was used to fetch the user data when the component mounted, ensuring that the state is updated with the fetched data.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+By leveraging these hooks, we can effectively manage and update dynamic state in React components.
