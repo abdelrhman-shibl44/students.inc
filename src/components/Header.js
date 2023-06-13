@@ -5,7 +5,7 @@ const Header = () => {
       <div className="container">
         <div className="content">
           <div className="time">
-            <img src="/images/icons/time-icon.png" alt="time"></img>
+            <img src="images/icons/time-icon.png" alt="time"></img>
             <span>15 Minutes</span>
           </div>
           <h1 className="header_title">The Big Five: Your Gateway to Greater Discoveries!</h1>
